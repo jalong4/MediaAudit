@@ -15,6 +15,7 @@ class ViewController: NSViewController {
 	var checksumMap = NSMutableDictionary()
 	var duplicateFileMap = NSMutableDictionary()
 	var cancelled = false
+	var logfile = NSURL()
 	
 	@IBOutlet weak var folderLabel: NSTextField!
 	@IBOutlet weak var fileLabel: NSTextField!
@@ -84,12 +85,9 @@ class ViewController: NSViewController {
 				return
 		}
 		
-		//		let folder = "/Users/v644112/Desktop"
-		//		let url = NSURL(fileURLWithPath: folder, isDirectory: true)
-		
-		
 		folderLabel.stringValue = folder
 		processButton.title = "Processing..."
+		createLogFile("mediaAudit.txt")
 		
 		if let urls = getFilesInFolder(url) {
 			
@@ -102,9 +100,11 @@ class ViewController: NSViewController {
 				NSRunLoop.mainRunLoop().runUntilDate(NSDate(timeIntervalSinceNow:0.001))
 				if let data = NSData(contentsOfFile: currentFilename) {
 					let checksum = data.md5().toHexString()
-						if let checksumFilename = self.checksumMap[checksum] {
+						if let checksumFilename = self.checksumMap[checksum] as? String {
 							// dup
 							print("file: \(checksumFilename) is a duplicate of \(currentFilename)")
+							
+							writeToLogFile("rm '\(checksumFilename)'\nrm '\(currentFilename)'\n\n")
 							if let dups = duplicateFileMap[checksum] as? NSArray {
 								let newdups = NSMutableArray()
 								newdups.addObjectsFromArray(dups as [AnyObject])
@@ -166,7 +166,47 @@ class ViewController: NSViewController {
 		return urls
 		
 	}
+	
+	func writeToLogFile(log: String) {
 		
+		let data = log.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+		
+		if NSFileManager.defaultManager().fileExistsAtPath(self.logfile.path!) {
+			do {
+				let fileHandle = try NSFileHandle(forWritingToURL: self.logfile)
+				
+				fileHandle.seekToEndOfFile()
+				fileHandle.writeData(data)
+				fileHandle.closeFile()
+				
+			} catch let error as NSError {
+				print("Failed opening URL: \(self.logfile), Error: " + error.localizedDescription)
+			}
+		}
+		else {
+			do {
+				try log.writeToURL(self.logfile, atomically: true, encoding: NSUTF8StringEncoding)
+			} catch let error as NSError {
+				print("Failed writing to URL: \(self.logfile), Error: " + error.localizedDescription)
+			}
+		}
+		
+	}
+	
+	func createLogFile(filename: String) {
+		
+		let DocumentDirURL = try! NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+		self.logfile = DocumentDirURL.URLByAppendingPathComponent(filename)
+		
+		if NSFileManager.defaultManager().fileExistsAtPath(self.logfile.path!) {
+			do {
+				try NSFileManager.defaultManager().removeItemAtPath(self.logfile.path!)
+			} catch {
+				print("An error during a removing old logfile")
+			}
+		}
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
