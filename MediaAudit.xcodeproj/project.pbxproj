@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FFF7EDCC267243F927FBA15 /* Pods_MediaAudit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F692808FC795EAFBB38492 /* Pods_MediaAudit.framework */; };
 		7963C1511D7E443500906AC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963C1501D7E443500906AC7 /* AppDelegate.swift */; };
 		7963C1531D7E443500906AC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963C1521D7E443500906AC7 /* ViewController.swift */; };
 		7963C1551D7E443500906AC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7963C1541D7E443500906AC7 /* Assets.xcassets */; };
 		7963C1581D7E443500906AC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963C1561D7E443500906AC7 /* Main.storyboard */; };
 		79CB5F0E1D88EA5D0022AE10 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB5F0D1D88EA5D0022AE10 /* NSDate+Extensions.swift */; };
-		87B755A8761CE0F8F1283FB3 /* Pods_MediaAudit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0FFBFE11ACE0E548791C80 /* Pods_MediaAudit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E0FFBFE11ACE0E548791C80 /* Pods_MediaAudit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaAudit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29288F053D82F6F9FAEA14EE /* Pods-MediaAudit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaAudit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediaAudit/Pods-MediaAudit.debug.xcconfig"; sourceTree = "<group>"; };
+		65F692808FC795EAFBB38492 /* Pods_MediaAudit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaAudit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7963C14D1D7E443500906AC7 /* MediaAudit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaAudit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7963C1501D7E443500906AC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7963C1521D7E443500906AC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +25,7 @@
 		7963C1571D7E443500906AC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7963C1591D7E443500906AC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79CB5F0D1D88EA5D0022AE10 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extensions.swift"; path = "Extensions/NSDate+Extensions.swift"; sourceTree = "<group>"; };
-		7A40582D78752895ED0F4124 /* Pods-MediaAudit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaAudit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediaAudit/Pods-MediaAudit.debug.xcconfig"; sourceTree = "<group>"; };
-		7BF5843FA0DBAB13C0D1A8FE /* Pods-MediaAudit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaAudit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediaAudit/Pods-MediaAudit.release.xcconfig"; sourceTree = "<group>"; };
+		86F0F4C9F6320D2D23973FE3 /* Pods-MediaAudit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaAudit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediaAudit/Pods-MediaAudit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,26 +33,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B755A8761CE0F8F1283FB3 /* Pods_MediaAudit.framework in Frameworks */,
+				1FFF7EDCC267243F927FBA15 /* Pods_MediaAudit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CD4B90F76003EA770E1890E /* Frameworks */ = {
+		6C4D119BF5C305BDD0C128D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E0FFBFE11ACE0E548791C80 /* Pods_MediaAudit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		706153CB2BCEED2894F17F82 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7A40582D78752895ED0F4124 /* Pods-MediaAudit.debug.xcconfig */,
-				7BF5843FA0DBAB13C0D1A8FE /* Pods-MediaAudit.release.xcconfig */,
+				29288F053D82F6F9FAEA14EE /* Pods-MediaAudit.debug.xcconfig */,
+				86F0F4C9F6320D2D23973FE3 /* Pods-MediaAudit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -62,8 +54,8 @@
 			children = (
 				7963C14F1D7E443500906AC7 /* MediaAudit */,
 				7963C14E1D7E443500906AC7 /* Products */,
-				706153CB2BCEED2894F17F82 /* Pods */,
-				3CD4B90F76003EA770E1890E /* Frameworks */,
+				6C4D119BF5C305BDD0C128D0 /* Pods */,
+				CA4020014E77506F4B1FC06B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +88,14 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
+		CA4020014E77506F4B1FC06B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65F692808FC795EAFBB38492 /* Pods_MediaAudit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,12 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7963C15C1D7E443500906AC7 /* Build configuration list for PBXNativeTarget "MediaAudit" */;
 			buildPhases = (
-				7B113F6E6ECC619EDA2594EB /* Check Pods Manifest.lock */,
+				F94D1A4A0F528A4A5BB694BC /* [CP] Check Pods Manifest.lock */,
 				7963C1491D7E443500906AC7 /* Sources */,
 				7963C14A1D7E443500906AC7 /* Frameworks */,
 				7963C14B1D7E443500906AC7 /* Resources */,
-				D396338E05F8423B1516CA17 /* Embed Pods Frameworks */,
-				BE4527E8B96DA022399BD991 /* Copy Pods Resources */,
+				AAB0A88613F262B66D3A29B4 /* [CP] Embed Pods Frameworks */,
+				A77AD56BE23B85606A153B20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +131,7 @@
 				TargetAttributes = {
 					7963C14C1D7E443500906AC7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -165,29 +166,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7B113F6E6ECC619EDA2594EB /* Check Pods Manifest.lock */ = {
+		A77AD56BE23B85606A153B20 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BE4527E8B96DA022399BD991 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,19 +181,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MediaAudit/Pods-MediaAudit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D396338E05F8423B1516CA17 /* Embed Pods Frameworks */ = {
+		AAB0A88613F262B66D3A29B4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MediaAudit/Pods-MediaAudit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F94D1A4A0F528A4A5BB694BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -321,7 +322,7 @@
 		};
 		7963C15D1D7E443500906AC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A40582D78752895ED0F4124 /* Pods-MediaAudit.debug.xcconfig */;
+			baseConfigurationReference = 29288F053D82F6F9FAEA14EE /* Pods-MediaAudit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -329,12 +330,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jalong4.MediaAudit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		7963C15E1D7E443500906AC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BF5843FA0DBAB13C0D1A8FE /* Pods-MediaAudit.release.xcconfig */;
+			baseConfigurationReference = 86F0F4C9F6320D2D23973FE3 /* Pods-MediaAudit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -342,6 +344,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jalong4.MediaAudit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

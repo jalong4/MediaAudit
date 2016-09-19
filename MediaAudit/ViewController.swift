@@ -196,7 +196,7 @@ class ViewController: NSViewController {
 	func createLogFile(filename: String) {
 		
 		let DocumentDirURL = try! NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
-		self.logfile = DocumentDirURL.URLByAppendingPathComponent(filename)
+		self.logfile = DocumentDirURL.URLByAppendingPathComponent(filename) ?? ""
 		
 		if NSFileManager.defaultManager().fileExistsAtPath(self.logfile.path!) {
 			do {

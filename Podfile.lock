@@ -1,0 +1,15 @@
+PODS:
+  - CryptoSwift (0.5.1)
+  - ObjectMapper (1.4.0)
+
+DEPENDENCIES:
+  - CryptoSwift (= 0.5.1)
+  - ObjectMapper
+
+SPEC CHECKSUMS:
+  CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
+
+PODFILE CHECKSUM: 7ccefbb56e13912d66908f5e852a92c5c2afbbd9
+
+COCOAPODS: 1.1.0.rc.2
